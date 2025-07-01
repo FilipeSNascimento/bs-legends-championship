@@ -1,0 +1,281 @@
+/*Imagem de fundo e altura do texto*/
+body {
+  background-image: url('Imagens/Fundo_Azul.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 100px; 
+  
+}
+
+/* Logo fixa com posicionamento dentro do cabeçalho */
+.logo-fixa {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1050;
+}
+
+.logo-fixa img {
+  max-width: 60px;
+  height: auto;
+  display: block;
+}
+
+/* Cabeçalho fixo: logo + título */
+.top-header {
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 10px 0 10px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajusta o título dentro do cabeçalho */
+.top-header h5 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .top-header h5 {
+    font-size: 1.8rem;
+  }
+
+  .logo-fixa img {
+    max-width: 45px;
+  }
+
+  .top-header {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-header h5 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Itens da navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: 0.3s ease;
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Destaque ao passar o mouse na navbar */
+.navbar-nav .nav-link:hover {
+  background-color: #FFD700;
+  color: #000;
+  text-shadow: none;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5); 
+}
+
+
+/* Itens do dropdown - estilo normal */
+.dropdown-item.instagram,
+.dropdown-item.discord,
+.dropdown-item.email,
+.dropdown-item.form {
+  color: #fff;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Hover: cor específica de cada plataforma */
+.dropdown-item.instagram:hover {
+  background-color: #E1306C; 
+  color: #000;
+  box-shadow: 0 4px 12px rgba(225, 48, 108, 0.5);
+  text-shadow: none;
+}
+
+.dropdown-item.discord:hover {
+  background-color: #5865F2; 
+  color: #000;
+  box-shadow: 0 4px 10px rgba(88, 101, 242, 0.4);
+  text-shadow: none;
+}
+
+.dropdown-item.email:hover {
+  background-color: #D44638; 
+  color: #000;
+  box-shadow: 0 4px 10px rgba(212, 70, 56, 0.4);
+  text-shadow: none;
+}
+
+.dropdown-item.form:hover {
+  background-color: #00BFFF;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
+  transform: scale(1.05);
+  text-shadow: none;
+}
+/* Cursor pointer */
+.dropdown-item {
+  cursor: pointer;
+}
+
+
+/* Login */
+.login-title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  color: #ffffff; 
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Borda Login */
+.login-box {
+  background: linear-gradient(to bottom right, #0b1e3c, #1c3d6e);
+  color: white;
+  border-radius: 15px;
+  border: 2px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo do botão de login */
+.login-button {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover do botão de login */
+.btn-primary:hover {
+  font-family: 'Luckiest Guy', cursive;
+  background-color: #FFD700; 
+  color: #000;
+  text-shadow: none;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Fonte descrição */
+.descricao-campeonato {
+  font-family: 'Roboto', sans-serif;
+}
+
+.descricao-campeonato p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+/* Fonte Título */
+.titulo-contornado {
+  font-family: 'Luckiest Guy', cursive;
+  color: white;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
+
+/*Fundo do formulario.html */
+.formulario-body {
+    background-image: url('Imagens/Galaxia.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 100px;
+    background-attachment: fixed; 
+  }
+  
+/* Estilo da caixa do formulário */
+.formulario-body .formulario-section {
+  background: rgba(0, 0, 0, 0.7); 
+  border-radius: 20px;
+  border: 2px solid #00ffff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(255, 200, 50, 0.6);
+}
+
+/* Título do formulário */
+.formulario-body .formulario-section h2 {
+  font-family: 'Luckiest Guy', cursive;
+  color: #ffcc00;
+  text-shadow: 2px 2px #000;
+}
+
+/* Inputs e selects */
+.formulario-body .form-control,
+.formulario-body .form-select {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+}
+
+.formulario-body .form-control:focus,
+.formulario-body .form-select:focus {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-color: #ffcc00;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+/* Botão */
+.formulario-body button[type="submit"] {
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+.formulario-body button[type="submit"]:hover {
+  background-color: #fff700;
+  box-shadow: 0 0 25px #ffcc00, 0 0 10px #fff700;
+}
+
+/* Mensagem de sucesso */
+.formulario-body #mensagemSucesso {
+  background-color: #198754;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+}
