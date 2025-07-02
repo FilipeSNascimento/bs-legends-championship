@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "name": "bs-legends-championship",
+  "version": "1.0.0",
+  "main": "formulario.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilipeSNascimento/bs-legends-championship.git"
+  },
+  "author": "Filipe Silva do Nascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FilipeSNascimento/bs-legends-championship/issues"
+  },
+  "homepage": "https://github.com/FilipeSNascimento/bs-legends-championship#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
