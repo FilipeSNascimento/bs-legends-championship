@@ -1,6 +1,6 @@
 /*Imagem de fundo e altura do texto*/
 body {
-  background-image: url('Imagens/Fundo_Azul.jpg');
+  background-image: url('/imagens/Fundo_Azul.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -215,7 +215,7 @@ body {
 
 /*Fundo do formulario.html */
 .formulario-body {
-    background-image: url('Imagens/Galaxia.png'); 
+    background-image: url('/imagens/Galaxia.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
