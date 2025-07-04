@@ -4,6 +4,7 @@ import homeRoutes from "./routes/home.js";
 import formularioRoutes from "./routes/formulario.js";
 import inscricaoRoutes from "./routes/inscricao.js";
 import cadastroRoutes from "./routes/cadastro.js";
+import loginRoutes from "./routes/login.js";
 
 const app = express();
 
@@ -23,9 +24,10 @@ app.use("/", homeRoutes);
 app.use("/", formularioRoutes);
 app.use("/", inscricaoRoutes);
 app.use("/", cadastroRoutes);
+app.use("/", loginRoutes);
 
 //Iniciar o servidor
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}`);
 });
