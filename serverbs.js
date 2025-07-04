@@ -1,51 +1,26 @@
-const express = require('express');
+import bodyParser from "body-parser";
+import express from "express";
+import homeRoutes from "./routes/home.js";
+import formularioRoutes from "./routes/formulario.js";
+import inscricaoRoutes from "./routes/inscricao.js";
+
 const app = express();
-
-const bodyParser = require("body-parser");
-
-app.use(express.static('public'));
 
 app.set("view engine", "ejs");
 
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.static('public'));
 
+app.use(express.urlencoded({ extended: true }));
+
+app.use("/css", express.static("./node_modules/bootstrap/dist/css"));
+app.use("/js", express.static("./node_modules/bootstrap/dist/js"));
+
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-//Rota raiz
-app.get('/', (req, res) => {
-  let nome = "Filipe";
-  res.render("bs_legends", {
-    nome: nome,
-  }
-  );
-});
-
-//Rota /formulário
-app.get('/formulario', (req, res) => {
-  res.render("formulario");
-});
-
-//Rota /bs_legends
-app.get('/bs_legends', (req, res) => {
-  let nome = "Filipe";
-  res.render("bs_legends", {
-    nome: nome,
-  });
-});
-
-//Rota /bs_legends
-app.get('/bs_legends#form-login', (req, res) => {
-  res.render("bs_legends#form-login");
-});
-
-//Rota /inscricao
-app.get('/inscricao', (req, res) => {
-  let nome = "Filipe";
-  res.render("inscricao", {
-    nome: nome,
-  }
-  );
-});
+app.use("/", homeRoutes);
+app.use("/", formularioRoutes);
+app.use("/", inscricaoRoutes);
 
 //Iniciar o servidor
 const PORT = process.env.PORT || 3001;
