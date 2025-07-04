@@ -3,6 +3,7 @@ import express from "express";
 import homeRoutes from "./routes/home.js";
 import formularioRoutes from "./routes/formulario.js";
 import inscricaoRoutes from "./routes/inscricao.js";
+import cadastroRoutes from "./routes/cadastro.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use("/", homeRoutes);
 app.use("/", formularioRoutes);
 app.use("/", inscricaoRoutes);
+app.use("/", cadastroRoutes);
 
 //Iniciar o servidor
 const PORT = process.env.PORT || 3001;
