@@ -28,15 +28,22 @@ export const cadastrarUsuario = async (req: Request, res: Response) => {
 
 export const autenticarUsuario = async (req: Request, res: Response) => {
   const { email, senha } = req.body;
+  console.log('Login recebido:', email, senha);
 
   try {
     const usuario = await User.findOne({ where: { email } });
 
     if (!usuario) {
+      console.log('Usuário não encontrado');
       return res.status(401).send('E-mail ou senha incorretos.');
     }
 
+    console.log('Usuário encontrado:', usuario.email);
+    console.log('Senha no banco:', usuario.senha);
+    console.log('Senha digitada:', senha);
+
     if (usuario.senha !== senha) {
+      console.log('Senhas não batem');
       return res.status(401).send('E-mail ou senha incorretos.');
     }
 

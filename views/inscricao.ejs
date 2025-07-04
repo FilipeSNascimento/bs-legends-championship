@@ -7,6 +7,13 @@
       <div class="col-lg-8">
         <section id="form-login" class="formulario-section text-white p-4 rounded shadow-lg">
           <h2 class="text-center mb-4">Inscrição da Equipe</h2>
+
+          <% if (req.query.sucesso === 'true') { %>
+          <div class="alert alert-success text-center" role="alert">
+            🎉 Inscrição confirmada com sucesso!
+          </div>
+          <% } %>
+
           <form id="inscricaoForm" method="POST" action="/salvar-inscricao" enctype="multipart/form-data" novalidate>
             
             <h5 class="mb-3">Olá, <%= nome %> </h5>

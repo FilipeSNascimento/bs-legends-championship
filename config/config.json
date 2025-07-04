@@ -1,7 +1,7 @@
 {
   "development": {
     "dialect": "sqlite",
-    "storage": "./bs_legends.db"
+    "storage": "src/config/bs_legends.db"
   },
   "test": {
     "dialect": "sqlite",

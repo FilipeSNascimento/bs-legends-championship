@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/css", express.static("./node_modules/bootstrap/dist/css"));
 app.use("/js", express.static("./node_modules/bootstrap/dist/js"));
+app.use('/uploads', express.static('uploads'));
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
